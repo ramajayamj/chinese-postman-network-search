@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CPP & RCPT Network Security Demo</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>Network Security Search</h1>
+
+    <p class="subtitle">
+        Chinese Postman Tour (CPT) and Random Chinese Postman Tour (RCPT)
+    </p>
+
+
+    <!-- GRAPH PICKER -->
+
+    <div class="graph-picker">
+
+        <label for="graphSelect"><b>Choose a graph:</b></label>
+
+        <select id="graphSelect" onchange="loadGraph()">
+            {% for g in graph_options %}
+            <option value="{{ g.id }}">{{ g.label }}</option>
+            {% endfor %}
+        </select>
+
+    </div>
+
+
+    <!-- NETWORK -->
+
+    <div id="network">
+
+        <svg id="networkSvg" width="700" height="450"></svg>
+
+        <!-- ATTACKER -->
+
+        <div id="attacker">
+            🔴
+        </div>
+
+        <!-- SEARCHER -->
+
+        <div id="searcher">
+            🟢
+        </div>
+
+    </div>
+
+
+    <!-- CONTROLS -->
+
+    <div class="controls">
+
+        <button onclick="generateCPT()">
+            Generate CPT
+        </button>
+
+        <button onclick="runRCPT()">
+            Run RCPT
+        </button>
+
+        <button onclick="hideAttacker()">
+            Hide Attacker
+        </button>
+
+    </div>
+
+
+    <!-- RESULT -->
+
+    <div id="result">
+
+        <h3>Ready</h3>
+
+        <p>
+            Pick a graph above, then generate a CPT or run RCPT.
+        </p>
+
+    </div>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}">
+    </script>
+
+    <script>
+        loadGraph();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+body {
+
+    font-family: Arial, sans-serif;
+
+    text-align: center;
+
+    background: #f5f5f5;
+
+    margin: 0;
+}
+
+
+h1 {
+
+    margin-top: 25px;
+
+}
+
+
+.subtitle {
+
+    color: #555;
+
+}
+
+
+/* --------------------------------
+   GRAPH PICKER
+-------------------------------- */
+
+.graph-picker {
+
+    margin: 15px auto;
+
+}
+
+
+.graph-picker select {
+
+    padding: 6px 12px;
+
+    font-size: 15px;
+
+    border-radius: 6px;
+
+    border: 1px solid #999;
+
+}
+
+
+/* --------------------------------
+   NETWORK
+-------------------------------- */
+
+#network {
+
+    width: 700px;
+
+    height: 450px;
+
+    margin: 30px auto;
+
+    position: relative;
+
+    background: white;
+
+    border: 2px solid #333;
+
+    border-radius: 10px;
+
+}
+
+
+#networkSvg {
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+}
+
+
+/* --------------------------------
+   NODES & EDGES (drawn dynamically
+   inside the SVG by script.js)
+-------------------------------- */
+
+.graph-node-circle {
+
+    stroke: #2c3e50;
+
+    stroke-width: 2;
+
+    fill: #3498db;
+
+}
+
+
+.graph-node-label {
+
+    fill: white;
+
+    font-weight: bold;
+
+    font-size: 18px;
+
+    text-anchor: middle;
+
+    dominant-baseline: central;
+
+    pointer-events: none;
+
+}
+
+
+.graph-edge-line {
+
+    stroke: #555;
+
+    stroke-width: 4;
+
+}
+
+
+/* --------------------------------
+   SEARCHER
+-------------------------------- */
+
+#searcher {
+
+    position: absolute;
+
+    width: 45px;
+
+    height: 45px;
+
+    font-size: 30px;
+
+    line-height: 45px;
+
+    z-index: 10;
+
+    transition: all 0.7s ease;
+
+}
+
+
+/* --------------------------------
+   ATTACKER
+-------------------------------- */
+
+#attacker {
+
+    position: absolute;
+
+    width: 45px;
+
+    height: 45px;
+
+    font-size: 30px;
+
+    line-height: 45px;
+
+    z-index: 9;
+
+    display: none;
+
+}
+
+
+/* --------------------------------
+   BUTTONS
+-------------------------------- */
+
+button {
+
+    padding: 12px 25px;
+
+    margin: 8px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #2c3e50;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+}
+
+
+button:hover {
+
+    opacity: 0.8;
+
+}
+
+
+/* --------------------------------
+   RESULT
+-------------------------------- */
+
+#result {
+
+    width: 650px;
+
+    margin: 20px auto;
+
+    padding: 20px;
+
+    background: white;
+
+    border-radius: 8px;
+
+    border: 1px solid #ccc;
+
+}
